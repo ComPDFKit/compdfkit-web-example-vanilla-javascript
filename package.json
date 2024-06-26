@@ -1,0 +1,15 @@
+{
+  "name": "compdfkit-web-example-vanilla-javascript",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "http-server -a localhost -p 8080 -o",
+    "postinstall": "node scripts/copy-files.js"
+  },
+  "dependencies": {
+    "@compdfkit_pdf_sdk/webviewer": "^2.2.2"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

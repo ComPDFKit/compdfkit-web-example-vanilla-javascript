@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ComPDFKit Web Viewer</title>
+</head>
+<!-- Import WebViewer as a script tag -->
+<script src='webviewer.global.js'></script>
+<body>
+  <div id="app" style="width: 100%; height: 100vh;"></div>
+  <script>
+    ComPDFKitViewer.init({
+      pdfUrl: './example/developer_guide_web.pdf',
+      license: '<Input your license here>'
+    }, document.getElementById('app')).then((core) => {
+      docViewer = core.docViewer;
+
+      docViewer.addEvent('documentloaded', async () => {
+        console.log('document loaded');
+      })
+    })
+  </script>
+</body>
+</html>
